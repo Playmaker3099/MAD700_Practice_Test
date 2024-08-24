@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     //Button to exit the second page
     public void exitClick(View view)
     {
+        Toast.makeText(this, "You have EXITED", Toast.LENGTH_LONG ).show();
         System.out.println("You have Exited");
     }
 
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity
     public void saveClick(View view)
     {
         SharedPreferences storeText = getSharedPreferences("savedTEXTS", MODE_PRIVATE);
+        Toast.makeText(this, "Your notes are saved", Toast.LENGTH_LONG ).show();
 
     }
 
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(this, NewScreen.class);
         startActivity(intent);
+        Toast.makeText(this, "Saved Notes", Toast.LENGTH_LONG ).show();
     }
 }
 
