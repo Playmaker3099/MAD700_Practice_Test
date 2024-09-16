@@ -51,9 +51,12 @@ public class MainActivity extends AppCompatActivity
         //saves the notes
         BTNsave.setOnClickListener(v->
         {
-            SharedPreferences storeText = getSharedPreferences("savedTEXTS", MODE_PRIVATE);
-            storeText = (SharedPreferences) savedTextView;
-            Toast.makeText(this, "Your notes are saved", Toast.LENGTH_LONG ).show();
+            //Shared Preferences needs to be redone
+            SharedPreferences savedNotes = getSharedPreferences("Save", MODE_PRIVATE);
+
+            String string = btnsavedNotes.getText().toString();
+            SharedPreferences.Editor editor; 
+
         });
 
         //move from the main page to the new screen
